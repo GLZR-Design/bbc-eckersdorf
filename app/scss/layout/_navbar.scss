@@ -1,0 +1,50 @@
+/**********************************
+
+			N A V B A R
+
+**********************************/
+
+.navbar {
+	
+	display: grid;
+	background-color: $white;
+	grid-template-rows: [navbar-start navbar-social-start] 4rem [navbar-social-end navbar-main-start] 10rem [navbar-main-end navbar-end];
+	grid-template-columns: [full-start] 1fr [logo-start] auto [logo-end menu-start] auto [menu-end button-start] auto [button-end]  1fr [full-end];
+	
+	&__logo {
+		
+		grid-row: navbar-start / navbar-end;
+		grid-column: logo-start / logo-end;
+		
+	}
+	
+	&__main {
+		
+		grid-row: navbar-main-start / navbar-main-end;
+		grid-column: menu-start / menu-end;
+		
+	}
+	
+	&__button {
+		
+		grid-row: navbar-main-start / navbar-main-end;
+		grid-column: button-start / button-end;
+		
+	}
+	
+	&__social {
+		
+		grid-row: navbar-social-start / navbar-social-end;
+		grid-column: full-start / full-end;
+		background-color: $primary-dark;
+		
+	}
+	
+}
+
+.menu {
+	
+	display: flex;
+	list-style: none;
+	
+}

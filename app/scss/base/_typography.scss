@@ -1,0 +1,30 @@
+/*******************************
+
+		F O N T F A C E 
+
+*******************************/
+
+@font-face {
+    font-family: 'saira_extracondensedregular';
+    src: url('sairaextracondensed-regular.woff2') format('woff2'),
+         url('sairaextracondensed-regular.woff') format('woff'),
+         url('sairaextracondensed-regular.ttf') format('truetype'),
+         url('sairaextracondensed-regular.svg#saira_extracondensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'saira_extracondensedsemibold';
+    src: url('sairaextracondensed-semibold.woff2') format('woff2'),
+         url('sairaextracondensed-semibold.woff') format('woff'),
+         url('sairaextracondensed-semibold.ttf') format('truetype'),
+         url('sairaextracondensed-semibold.svg#saira_extracondensedsemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

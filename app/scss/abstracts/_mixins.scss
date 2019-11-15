@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// BREAKPOINTS 
+
+ @mixin breakpoint($point) {
+	 
+  @if $point == xxl {
+     
+	   @media (max-width: $breakpoint-xxl) { @content ; }
+  }
+	 
+  @else if $point == xl {
+     
+	   @media (max-width: $breakpoint-xl) { @content ; }
+  }
+	 
+  @else if $point == lg {
+     
+		@media (max-width: $breakpoint-lg) { @content ; }
+  }
+	 
+  @else if $point == md {
+     
+	   @media (max-width: $breakpoint-md)  { @content ; }
+  }
+	 
+  @else if $point == sm {
+     
+	  @media (max-width: $breakpoint-sm)  { @content ; }
+
+  }
+	 
+  @else if $point == xs {
+     
+	  @media (max-width: $breakpoint-xs)  { @content ; }
+
+  }
+	 
+}
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
